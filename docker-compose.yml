@@ -40,6 +40,9 @@ services:
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
         read_only: true
+      - type: bind
+        source: ./logstash/templates/userale.json
+        target: /usr/share/logstash/templates/userale.json
     ports:
       - "5044:5044"
       - "5000:5000/tcp"
